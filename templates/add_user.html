@@ -1,0 +1,23 @@
+<html>
+<form action="{{ url_for('add_user') }}" method="POST">
+
+{% if form.errors %}
+{{ form.errors }}
+<br/>
+{% endif %}
+
+{{ form.csrf_token() }}
+
+{{ form.email() }}
+<br/>
+
+{{ form.first_name() }}
+<br/>
+
+{{ form.last_name() }}
+<br/>
+
+<input type="submit" value="ok">
+
+</form>
+</html>

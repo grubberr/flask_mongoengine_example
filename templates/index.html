@@ -1,0 +1,17 @@
+<html>
+
+{% for post in posts %}
+    <a href="{{ url_for('edit_post', post_id=post.id) }}"> {{ post.title }} </a><br/>
+{% endfor %}
+
+<h3> users: </h3><br/>
+
+{% for user in users %}
+    {{ user }}<br/>
+{% endfor %}
+
+<br/>
+
+<a href="{{ url_for('add_post') }}"> add post </a><br/>
+<a href="{{ url_for('add_user') }}"> add user </a><br/>
+</html>
